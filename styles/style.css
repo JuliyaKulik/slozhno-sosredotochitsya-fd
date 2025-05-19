@@ -3,3 +3,124 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
+
+.header {
+  display: grid;
+  background-image: url(../images/cover-image-dark.png);
+  background-size: cover;
+  background-position: center;
+  grid-template-rows: repeat(4, minmax(min-content, max-content));
+  grid-template-columns: 1fr;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+    content: '';
+    position: absolute;
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
+    display: block;
+    inline-size: 25px;
+    block-size: 25px;
+    border-inline-end: 1px solid var(--nav-text-color);
+    border-block-start: 1px solid var(--nav-text-color);
+}
+
+.decorated-zone::after {
+  content: '';
+  display: block;
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
+  border-inline-start: 1px solid var(--nav-text-color);
+  border-block-end: 1px solid var(--nav-text-color);
+}
+
+.record {
+  grid-row: 1;
+  padding-inline-end: 38px;
+  padding-block-start: 10px;
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--nav-text-color);
+  text-transform: uppercase;
+  justify-self: end;
+}
+
+.record::after {
+  content: '';
+  position: absolute;
+  inset-inline-end: 19px;
+  inset-block-start: 18px;
+  display: inline-block;
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.header__theme-menu {
+  grid-row: 2;
+  justify-self: end;
+  padding-block-start: 39px;
+  padding-inline-end: 10px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--nav-text-color);
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+}
+
+.header__title {
+  grid-row: 3;
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);;
+  line-height: 83%;
+  color: var(--title-text-color);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 55px;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__description-text {
+  grid-row: 4;
+  display: block;
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 66px;
+}
+
+.title-decor {
+  background-color: var(--text-bg-color);
+  color: var(--p-text-color);
+}
+
+
+
