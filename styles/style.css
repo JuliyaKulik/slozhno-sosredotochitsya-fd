@@ -1,6 +1,10 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-image: var(--bg-image-dark);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 
@@ -18,15 +22,15 @@
 }
 
 .decorated-zone::before {
-    content: '';
-    position: absolute;
-    inset-block-start: 10px;
-    inset-inline-end: 10px;
-    display: block;
-    inline-size: 25px;
-    block-size: 25px;
-    border-inline-end: 1px solid var(--nav-text-color);
-    border-block-start: 1px solid var(--nav-text-color);
+  content: '';
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  display: block;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-end: 1px solid var(--nav-text-color);
+  border-block-start: 1px solid var(--nav-text-color);
 }
 
 .decorated-zone::after {
@@ -46,8 +50,8 @@
   padding-inline-end: 38px;
   padding-block-start: 10px;
   font-family: var(--main-font);
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: var(--font-weigth-text);
+  font-size: var(--font-size);
   line-height: 25px;
   color: var(--nav-text-color);
   text-transform: uppercase;
@@ -70,33 +74,51 @@
 .header__theme-menu {
   grid-row: 2;
   justify-self: end;
-  padding-block-start: 39px;
-  padding-inline-end: 10px;
+  padding-block-start: 41px;
+  padding-inline-end: 15px;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
 }
 
 .header__theme-menu-button {
   font-family: var(--main-font);
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: var(--font-weigth-text);
+  font-size: var(--font-size);
   line-height: 18px;
   text-align: center;
   color: var(--nav-text-color);
   background-color: transparent;
   border: none;
   text-transform: lowercase;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.4);
+}
+
+.header__theme-menu-button_type_dark {
+  border: 1px solid rgba(255, 0, 112, 1);
 }
 
 .header__title {
   grid-row: 3;
+  margin-top: 68px;
   font-family: var(--main-font);
-  font-weight: 700;
-  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);;
+  font-weight: var(--font-weigth-heading);
+  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   line-height: 83%;
   color: var(--title-text-color);
   margin-left: 10px;
@@ -109,8 +131,8 @@
   grid-row: 4;
   display: block;
   font-family: var(--main-font);
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: var(--font-weigth-heading);
+  font-size: var(--font-size);
   line-height: 23.4px;
   margin-left: 10px;
   margin-right: 10px;
@@ -121,6 +143,69 @@
   background-color: var(--text-bg-color);
   color: var(--p-text-color);
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 40px;
+}
+
+.why, .what, .how {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.heading, .subheading {
+  font-family: var(--main-font);
+  font-weight: var(--font-weigth-heading);
+  font-size: var(--font-size);
+  line-height: 23.4px;
+}
+
+.heading {
+  color: var(--accent-color);
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subheading + p {
+  margin-top: 10px;
+}
+
+.content__description-text {
+  font-family: var(--main-font);
+  font-weight: var(--font-weigth-text);
+  font-size: var(--font-size);
+  line-height: 23.4px;
+  color: #F1B2CE;
+}
+
+.a__content {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+  cursor: pointer;
+}
+
+.a__content:focus {
+  outline: none;
+}
+
+.a__content:focus-visible {
+  outline: 1px solid #F1B2CE;
+}
+
+.a__content:hover {
+  border-bottom: 1px solid #F1B2CE;
+}
+
 
 
 

@@ -3,12 +3,16 @@
   и их переопределение под различные устройства
 */
 :root {
+  --bg-image-dark: url(../images/cover-image-dark.png);
   --nav-text-color: #FF0070;
   --title-text-color: #DB00FF;
   --accent-color: #FF0070;
   --text-bg-color: #FF0070;
   --p-text-color: #000028;
   --main-font: 'IBM Plex Mono', sans-serif;
+  --font-weigth-text: 400;
+  --font-weigth-heading: 700;
+  --font-size: 18px;
 }
 
 
