@@ -9,12 +9,16 @@
 }
 
 .header {
+  min-block-size: 668px;
+  block-size: 100vh;
   display: grid;
   background-image: url(../images/cover-image-dark.png);
   background-size: cover;
   background-position: center;
-  grid-template-rows: repeat(4, minmax(min-content, max-content));
+  grid-template-rows: 1fr min-content 1fr;
   grid-template-columns: 1fr;
+  justify-items: end;
+  align-items: center;
 }
 
 .decorated-zone {
@@ -47,16 +51,17 @@
 
 .record {
   grid-row: 1;
-  padding-inline-end: 38px;
-  padding-block-start: 10px;
+  grid-column: 1;
+  align-self: start;
+  margin-right: 38px;
+  margin-top: 10px;
   font-family: var(--main-font);
   font-weight: var(--font-weigth-text);
   font-size: var(--font-size);
   line-height: 25px;
   color: var(--nav-text-color);
   text-transform: uppercase;
-  justify-self: end;
-}
+}  
 
 .record::after {
   content: '';
@@ -72,16 +77,16 @@
 }
 
 .header__theme-menu {
-  grid-row: 2;
-  justify-self: end;
-  padding-block-start: 41px;
-  padding-inline-end: 15px;
+  grid-row: 1;
+  grid-column: 1;
+  align-self: center;
+  margin-inline-end: 10px;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 15px;
 }
 
 .header__theme-menu-button {
@@ -95,6 +100,8 @@
   border: none;
   text-transform: lowercase;
   cursor: pointer;
+  padding-inline-end: 13px;
+  padding-inline-start: 13px;
 }
 
 .header__theme-menu-button:focus {
@@ -114,29 +121,23 @@
 }
 
 .header__title {
-  grid-row: 3;
-  margin-top: 68px;
   font-family: var(--main-font);
   font-weight: var(--font-weigth-heading);
   font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   line-height: 83%;
   color: var(--title-text-color);
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 55px;
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .header__description-text {
-  grid-row: 4;
-  display: block;
   font-family: var(--main-font);
   font-weight: var(--font-weigth-heading);
   font-size: var(--font-size);
   line-height: 23.4px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 66px;
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
 }
 
 .title-decor {
@@ -159,7 +160,7 @@
   flex-direction: column;
 }
 
-.heading, .subheading {
+.heading, .subheading, .heading-decor {
   font-family: var(--main-font);
   font-weight: var(--font-weigth-heading);
   font-size: var(--font-size);
@@ -169,6 +170,7 @@
 .heading {
   color: var(--accent-color);
 }
+
 
 .lists {
   display: flex;
