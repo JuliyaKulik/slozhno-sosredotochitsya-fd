@@ -53,7 +53,7 @@
   margin-inline-end: 38px;
   margin-block-start: 10px;
   font-family: var(--main-font);
-  font-weight: var(--font-weigth-text);
+  font-weight: var(--font-weigth-normal);
   font-size: var(--font-size);
   line-height: 139%;
   color: var(--accent-color);
@@ -88,7 +88,7 @@
 
 .header__theme-menu-button {
   font-family: var(--main-font);
-  font-weight: var(--font-weigth-text);
+  font-weight: var(--font-weigth-normal);
   font-size: var(--font-size);
   line-height: 100%;
   text-align: center;
@@ -101,25 +101,29 @@
   cursor: pointer;
 }
 
-.header__theme-menu-button:focus {
-  outline: none;
-}
-
-.header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
-}
-
-.header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
+.header__theme-menu-button_active {
+  pointer-events: none;
 }
 
 .header__theme-menu-button_type_dark {
   border: 1px solid var(--accent-color);
 }
 
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.4);
+}
+
 .title {
   font-family: var(--main-font);
-  font-weight: var(--font-weigth-heading);
+  font-weight: var(--font-weigth-bold);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
   color: var(--title-text-color);
@@ -133,7 +137,7 @@
 
 .header__description-text {
   font-family: var(--main-font);
-  font-weight: var(--font-weigth-heading);
+  font-weight: var(--font-weigth-bold);
   font-size: var(--font-size);
   line-height: 130%;
   margin-inline-start: 10px;
@@ -142,7 +146,7 @@
 
 .title-decor {
   background-color: var(--accent-color);
-  color: var(--p-text-color);
+  color: var(--accent-text-color);
 }
 
 .content {
@@ -165,7 +169,7 @@
 
 .content__typography {
   font-family: var(--main-font);
-  font-weight: var(--font-weigth-heading);
+  font-weight: var(--font-weigth-bold);
   font-size: var(--font-size);
   line-height: 130%;
 }
@@ -175,33 +179,33 @@
   margin-block-end: 20px;
 }
 
-.content__subheading + p {
-   margin-block-start: 10px;
-}
-
-.subheading-item-list + p {
-  margin-block-start: 10px;
-}
-
 .content__container {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+.content__subheading + p {
+  margin-block-start: 10px;
+}
+
 .subheading-item-list {
   font-family: var(--main-font);
-  font-weight: var(--font-weigth-text);
+  font-weight: var(--font-weigth-normal);
   font-size: var(--font-size);
   line-height: 130%;
 }
 
+.subheading-item-list + p {
+  margin-block-start: 10px;
+}
+
 .content__description-text {
   font-family: var(--main-font);
-  font-weight: var(--font-weigth-text);
+  font-weight: var(--font-weigth-normal);
   font-size: var(--font-size);
   line-height: 130%;
-  color: #F1B2CE;
+  color: var(--text-color);
 }
 
 .a__content {
@@ -215,11 +219,11 @@
 }
 
 .a__content:focus-visible {
-  outline: 1px solid #F1B2CE;
+  outline: 1px solid var(--text-color);
 }
 
 .a__content:hover {
-  border-bottom: 1px solid #F1B2CE;
+  border-block-end: 1px solid var(--text-color);
 }
 
 .gallery {
@@ -227,7 +231,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, min-content);
   gap: 10px;
-  min-width: 100%;
+  min-inline-size: 100%;
 }
 
 .image {
@@ -284,7 +288,7 @@
   }
 
   .title {
-   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__title {
@@ -333,27 +337,27 @@
     grid-row: 1 / 2;
   }
 
-  .sunset {
+  .img-sunset {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
   }
 
-  .ice-cream {
+  .img-ice-cream {
     grid-column: 3 / 4;
     grid-row: 2 / 4;
   }
 
-  .tape {
+  .img-tape {
     grid-column: 1 / 2;
     grid-row: 3 / 5;
   }
 
-  .books {
+  .img-books {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
   }
 
-  .street {
+  .img-street {
     grid-column: 2 / 4;
     grid-row: 4 / 5;
   }
@@ -411,7 +415,7 @@
 
   .content__item-list {
     flex-grow: 1;
-    flex-basis: 0%;
+    flex-basis: 33%;
   }
 
   .footer {
