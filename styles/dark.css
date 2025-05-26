@@ -5,7 +5,7 @@
 */
 
 :root.theme-dark {
-  --bg-image-dark: url(../images/cover-image-dark.png);
+  --bg-image: url(../images/cover-image-dark.png);
   --title-text-color: #DB00FF;
   --heading-text-color: #FF0070;
   --text-color: #F1B2CE;
