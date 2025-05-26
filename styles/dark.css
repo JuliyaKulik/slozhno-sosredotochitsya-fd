@@ -19,14 +19,14 @@
   }
 
   .decorated-zone::before {
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
-}
+    border-inline-end: 1px solid var(--accent-color);
+    border-block-start: 1px solid var(--accent-color);
+  }
 
-.decorated-zone::after {
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
-}
+  .decorated-zone::after {
+    border-inline-start: 1px solid var(--accent-color);
+    border-block-end: 1px solid var(--accent-color);
+  }
 
   .header__theme-menu-button {
     color: var(--accent-color);
