@@ -42,6 +42,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
+  --bg-color: #fff1f7;
   --bg-image: url(../images/cover-image-light.png);
   --title-text-color: #FFC2E6;
   --heading-text-color: #353430;
