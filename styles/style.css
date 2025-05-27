@@ -1,6 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-size: cover;
   background-position: center;
@@ -98,6 +99,8 @@
   text-transform: lowercase;
   padding-inline-end: 13px;
   padding-inline-start: 13px;
+  padding-block-start: 2px;
+  padding-block-end: 2px;
   cursor: pointer;
 }
 
@@ -142,6 +145,7 @@
   line-height: 130%;
   margin-inline-start: 10px;
   margin-inline-end: 10px;
+  margin-block-end: 10px;
 }
 
 .title-decor {
@@ -150,7 +154,6 @@
 }
 
 .content {
-  min-block-size: 5355px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -185,8 +188,10 @@
   gap: 20px;
 }
 
-.content__subheading + p {
-  margin-block-start: 10px;
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .subheading-item-list {
@@ -194,10 +199,6 @@
   font-weight: var(--font-weigth-normal);
   font-size: var(--font-size);
   line-height: 130%;
-}
-
-.subheading-item-list + p {
-  margin-block-start: 10px;
 }
 
 .content__description-text {
@@ -301,10 +302,10 @@
     justify-self: end;
     margin-inline-start: 384px;
     margin-inline-end: 20px;
+    margin-block-end: 20px;
   }
 
   .content {
-    min-block-size: 3682px;
     gap: 80px;
     margin-inline-start: 20px;
     margin-inline-end: 20px;
@@ -388,21 +389,12 @@
   .header__description-text {
     margin-inline-start: 513px;
   }
-  
-  .content {
-    min-block-size: 3352px;
-  }
 
   .content__questions {
     grid-template-columns: repeat(3, 1fr);
   }
 
   .content__container {
-    grid-column: 2 / 4;
-  }
-  
-  .content__subheading {
-    grid-row: 1 / 2;
     grid-column: 2 / 4;
   }
   
